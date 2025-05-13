@@ -1,0 +1,176 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Checkout Page */
+.checkout-page {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 40px;
+  background: #f7f7f7;
+  font-family: Arial, sans-serif;
+}
+
+.checkout-container {
+  display: flex;
+  gap: 50px;
+}
+
+.order-summary, .checkout-form {
+  background: white;
+  border-radius: 10px;
+  padding: 30px;
+  width: 400px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.order-summary h2, .checkout-form h2 {
+  margin-bottom: 20px;
+}
+
+.product {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.product-img {
+  width: 60px;
+  height: 60px;
+  background-color: #ddd;
+  border-radius: 8px;
+}
+
+.product-details p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.price-breakdown p, .total {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0;
+}
+
+.total {
+  font-weight: bold;
+}
+
+.coupon {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+}
+
+.coupon input {
+  flex: 1;
+  padding: 5px;
+}
+
+.coupon button {
+  padding: 6px 10px;
+  background-color: teal;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+.checkout-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.city-row, .card-row {
+  display: flex;
+  gap: 10px;
+}
+
+input[type="text"], input[type="email"] {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.submit-btn {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #0a8779;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+/* Submitted Page */
+.submitted-page {
+  background-color: #0a8779;
+  color: white;
+  text-align: center;
+  padding-top: 150px;
+}
+
+.submitted-container h1 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.buttons .btn {
+  text-decoration: none;
+  color: white;
+  background-color: #0a5f4f;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+/* Shipping Page */
+.shipping-page {
+  background-color: #0a8779;
+  color: white;
+  padding: 40px 20px;
+}
+
+.shipping-container {
+  background: white;
+  color: black;
+  max-width: 700px;
+  margin: auto;
+  border-radius: 10px;
+  padding: 30px;
+}
+
+.steps {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.step span {
+  font-size: 24px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.completed span {
+  color: green;
+}
+
+.step p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.log {
+  background-color: #f4f4f4;
+  padding: 15px;
+  border-radius: 6px;
+  font-size: 14px;
+}
