@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | E-Commerce Store</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Shop</a>
+      <a href="#">Blog</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+      <a href="#">Customer Engagement</a>
+    </nav>
+  </header>
+  
+  <main class="container">
+    <h1>Contact Us</h1>
+    <p>Email: mail@support.co.za<br>Phone: 083 993 0032</p>
+    
+    <form id="contactForm">
+      <div class="form-group">
+        <label for="first-name">First Name</label>
+        <input type="text" id="first-name" required>
+      </div>
+      <div class="form-group">
+        <label for="last-name">Last Name</label>
+        <input type="text" id="last-name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Your Message</label>
+        <textarea id="message" required></textarea>
+      </div>
+      <button type="submit" class="btn" onclick="showMessage()">Send Message</button>
+    </form>
+  </main>
+
+  <script>
+    function showMessage() {
+      alert("Your message has been sent successfully!");
+      
+      // Optional: Reset the form after submission
+      document.getElementById("contactForm").reset();
+      
+      // Prevent form from actually submitting (for this demo)
+      event.preventDefault();
+    }
+  </script>
+</body>
+</html>
