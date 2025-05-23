@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel</title>
+  <link rel="stylesheet" href="../css/admin.css">
+    ">
+</head>
+<body>
+  <div class="container">
+  
+    <aside class="sidebar">
+      <h2>ADMIN PANEL</h2>
+      <ul class="nav">
+        <li class="active">Dashboard</li>
+        <li>Manage products</li>
+        <li>Manage Categories</li>
+        <li>Orders</li>
+        <li>Customers</li>
+        <li>Analysis</li>
+        <li>Promotions</li>
+        <li>Settings</li>
+      </ul>
+    </aside>
+
+   
+    <main class="main-content">
+      
+      <header class="top-bar">
+        <nav>
+          <a href="#">Home</a>
+          <a href="#">Shop</a>
+          <a href="#">Blog</a>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+          <a href="#">🛒</a>
+        </nav>
+        <div class="top-actions">
+          <input type="text" placeholder="Search">
+          <button class="admin-btn">Admin ▼</button>
+        </div>
+      </header>
+
+      
+      <section class="summary">
+        <div class="card total-sales">R15,320 <br><span>Total Sales</span></div>
+        <div class="card total-orders">150 <br><span>Total Orders</span></div>
+        <div class="card total-customers">600 <br><span>Total Customers</span></div>
+      </section>
+
+      
+      <section class="charts">
+        <div class="chart">
+          <h4>Sales overview</h4>
+          <img src="https://via.placeholder.com/150x100?text=Bar+Chart" alt="Sales Overview">
+        </div>
+        <div class="chart">
+          <h4>Site Visit</h4>
+          <img src="https://via.placeholder.com/150x100?text=Line+Chart" alt="Site Visit">
+        </div>
+      </section>
+
+      
+      <section class="orders">
+        <h4>Recent Orders</h4>
+        <table>
+          <thead>
+            <tr>
+              <th>Order ID</th>
+              <th>Customer</th>
+              <th>Date</th>
+              <th>Status</th>
+              <th>Qty</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>#457</td>
+              <td>Lemons Mark</td>
+              <td>13/04/2025</td>
+              <td>✔</td>
+              <td>2</td>
+              <td>R253.00</td>
+            </tr>
+            <tr>
+              <td>#510</td>
+              <td>Steven Walker</td>
+              <td>14/04/2025</td>
+              <td>✔</td>
+              <td>1</td>
+              <td>R120.00</td>
+            </tr>
+            <tr>
+              <td>#614</td>
+              <td>Tracey Zulu</td>
+              <td>18/04/2025</td>
+              <td>✔</td>
+              <td>1</td>
+              <td>R487.00</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
