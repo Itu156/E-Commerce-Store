@@ -1,0 +1,246 @@
+  @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #e6e9f4;
+    }
+
+    /* Header */
+    .header {
+      display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding : 20px 80px; 
+  background : #E3E6F3;
+  box-shadow : 0 5px 15px rgba(0, 0, 0, 0.06);
+  z-index: 999;
+  position: sticky;
+  top: 0;
+  left:0;
+	  
+    }
+
+	#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding : 20px 80px; 
+  background : #E3E6F3;
+  box-shadow : 0 5px 15px rgba(0, 0, 0, 0.06);
+  z-index: 999;
+  position: sticky;
+  top: 0;
+  left:0;
+}
+/*navigation*/
+
+#navbar{
+  display :flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+#navbar li{
+  list-style: none;
+  padding: 0 20px;
+  position: relative;
+
+}
+
+#navbar li a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+  transition: 0.3s ease;
+
+}
+#navbar li a:hover,
+#navbar li a.active
+{
+  color: #088178;
+
+}
+
+#navbar li a.active::after
+,#navbar li a:hover::after
+{
+  content: "";
+  width: 30%;
+  height: 2px;
+  background: #088178;
+  position: absolute;
+  bottom: -4px;
+  left: 20px;
+
+
+}
+/* Hero Section **/
+#hero {
+  background-image: url("../img/hero1.png");
+  height: 90vh;
+  width :100%;
+  background-size: cover;
+  background-position: top 25% right 0;
+  padding:0 80px;
+  display: flex;
+  flex-direction: column;
+  align-items:flex-start ;
+  justify-content: center;
+
+}
+
+#hero h4{
+  padding-bottom: 15px;
+
+}
+#hero h1{
+  color:#088178;
+
+}
+
+#hero button{
+  border-radius: 15px;
+  border-style: none;
+  color: white;
+  background-color: #088178;
+  padding: 14px 60px 14px 60px;
+  cursor:pointer;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+    /* Navigation bar */
+    .main-nav {
+      background-color: #d9d9d9;
+      padding: 15px 30px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      position: relative;
+    }
+
+    .main-nav .menu-item {
+      position: relative;
+      cursor: pointer;
+    }
+
+    
+
+    .menu-item.sale {
+      color: red;
+    }
+
+    /* Dropdown menu */
+    .dropdown {
+      display: none;
+      position: absolute;
+      top: 55px;
+      left: 0;
+      background-color: #e6e9f4;
+      padding: 20px;
+      border-radius: 8px;
+      display: none;
+      flex-direction: row;
+      gap: 40px;
+      z-index: 1000;
+    }
+
+    .dropdown-section {
+      min-width: 140px;
+    }
+
+    .dropdown-section h4 {
+      margin-bottom: 10px;
+    }
+
+    .dropdown-section ul {
+      list-style: none;
+    }
+
+    .dropdown-section li {
+      margin-bottom: 8px;
+    }
+
+    .dropdown-images {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .dropdown-images .img-box {
+      position: relative;
+	  
+    }
+
+    .dropdown-images img {
+      width: 150px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 4px;
+	  
+    }
+
+    .dropdown-images .label {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      color: white;
+      font-weight: bold;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    /* Search Bar */
+    .search-bar {
+      position: absolute;
+      right: 50px;
+      top: 5px;
+      display: flex;
+      align-items: center;
+      background-color: #a6d9db;
+      padding: 5px 10px;
+      border-radius: 20px;
+	  
+    }
+
+    .search-bar input {
+      border: none;
+      background: transparent;
+      padding: 5px;
+	  color: black;
+    }
+
+    .search-bar i {
+      margin-left: 30px;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+      .hero-img img {
+        margin-top: 20px;
+        width: 100%;
+        max-width: 300px;
+      }
+      .main-nav {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+	footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 40px;
+      margin-top: 500px;
+    }
