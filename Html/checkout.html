@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Checkout</title>
+  <link rel="stylesheet" href="../css/shipping.css"/>
+</head>
+<body class="checkout-page">
+  <div class="checkout-container">
+    <div class="order-summary">
+      <h2>Your Order</h2>
+      <div class="product">
+        <div class="product-img"></div>
+        <div class="product-details">
+          <p><strong>Home made T-shirt</strong></p>
+          <p>Homemade graphic T-shirt in dark & easy fabric</p>
+        </div>
+      </div>
+      <div class="price-breakdown">
+        <p>Subtotal: <span>R 3,000.00</span></p>
+        <p>Discount: <span>R 0</span></p>
+        <p>Shipping: <span>R 150</span></p>
+        <hr>
+        <p class="total">Total: <span>R 3,150.00</span></p>
+      </div>
+      <div class="coupon">
+        <input type="text" placeholder="Apply Coupon Code..." />
+        <button>Apply</button>
+      </div>
+    </div>
+
+    <div class="checkout-form">
+      <h2>Checkout</h2>
+      <form action="order-submitted.html" method="GET">
+        <input type="email" placeholder="Email..." required />
+        <input type="text" placeholder="Country" required />
+        <input type="text" placeholder="Full Name" required />
+        <input type="text" placeholder="Address Line" required />
+        <div class="city-row">
+          <input type="text" placeholder="City" required />
+          <input type="text" placeholder="State" required />
+          <input type="text" placeholder="Zip Code" required />
+        </div>
+        <input type="text" placeholder="Shipping Address (optional)" />
+        <input type="text" placeholder="Name on Card" required />
+        <input type="text" placeholder="Card Number" required />
+        <div class="card-row">
+          <input type="text" placeholder="MM/YY" required />
+          <input type="text" placeholder="CVC" required />
+        </div>
+        <button type="submit" class="submit-btn">Place Order</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
