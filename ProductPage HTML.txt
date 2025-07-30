@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fashion Grove - Product Page</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo"><strong>Fashion</strong> <span>Grove</span></div>
+    <nav>
+      <ul class="nav-links">
+        <li>Home</li>
+        <li>Shop</li>
+        <li>Blog</li>
+        <li>About</li>
+        <li>Contact</li>
+      </ul>
+      <div class="cart-icon">🛒</div>
+    </nav>
+  </header>
+
+  <!-- Main Product Section -->
+  <main class="product-container">
+    <div class="product-image">
+      <img src="shirt-model.jpg" alt="Cartoon Astronut T-Shirt" />
+    </div>
+    <div class="product-info">
+      <h1>Cartoon Astronut T-Shirt</h1>
+      <p class="subheading">Quality All White T-shirt</p>
+      <p class="price">R 400</p>
+      <div class="quantity-box">
+        <button>+</button>
+        <span>1</span>
+        <button>−</button>
+      </div>
+      <ul class="description">
+        <li>Max Printing Area: 230×230×250mm</li>
+        <li>Max Print Speed: 150mm/s</li>
+        <li>Software: CURA, REPETIER host, Simplify 3D</li>
+        <li>Filament Diameter: 1.75mm</li>
+        <li>Material Support: PLA, PETG, any filament melt ≤260°C</li>
+        <li>Machine Size: 33×52×50cm</li>
+        <li>Extruder System: MK12 Single / Double together</li>
+      </ul>
+      <button class="cart-button">Add to cart</button>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <ul class="nav-links">
+      <li>Home</li>
+      <li>Shop</li>
+      <li>Blog</li>
+      <li>About</li>
+      <li>Contact</li>
+    </ul>
+    <div class="cart-icon">🛒</div>
+  </footer>
+</body>
+</html>
