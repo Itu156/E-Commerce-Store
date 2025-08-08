@@ -242,6 +242,7 @@ body {
 #product1 .pro:hover{
   box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.07);
 }
+/*  making the image fit in the box responsively */
 #product1 .pro img{
   width: 100%;
   border-radius: 20px;
@@ -275,7 +276,7 @@ body {
   color:#088178;
 
 }
-#product1 .pro .cart{
+#product1 .pro .shopping{
   width: 40px;
   height:40px;
   line-height: 40px;
@@ -287,8 +288,15 @@ body {
  position: absolute;
  bottom: 20px;
  right: 10px;
+ cursor: pointer;
+ 
+}
 
-} 
+/* #product1 .pro .shopping:hover {
+  background-color: #000;
+  color: white;
+} */
+
 #banner {
   display:flex;
   flex-direction: column;
@@ -468,10 +476,77 @@ transition:0.2s;
   border: 1px solid transparent;
   border-radius: 4px;
   outline: none;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
 
 }
 #newsletter button{
   background-color: #088178;
   color:white;
   white-space: nowrap;
+}
+
+/* footer{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+footer .follow{
+  display:flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+ 
+} */
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 40px 0;
+}
+
+.col-2 {
+  flex-grow: 2;
+}
+
+.col-1 a {
+  display: block;
+  text-decoration: none;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.footer div h3 {
+  font-weight: 300;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+form input {
+  width: 400px;
+  height: 45px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  outline: none;
+  border: solid black 1px;
+}
+
+form button {
+  background-color: black;
+  color: white;
+  padding: 10px 30px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.social-icons {
+  margin-top: 30px;
+}
+
+.social-icons i {
+  font-size: 22px;
+  margin: 10px;
+  cursor: pointer;
 }
