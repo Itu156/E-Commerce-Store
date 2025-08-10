@@ -1,109 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Admin Panel</title>
-  <link rel="stylesheet" href="../css/admin.css">
-    ">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>E-Commerce Admin Panel</title>
+
+  <!-- styles -->
+  <link rel="stylesheet" href="admin.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-  <div class="container">
-  
-    <aside class="sidebar">
-      <h2>ADMIN PANEL</h2>
-      <ul class="nav">
-        <li class="active">Dashboard</li>
-        <li>Manage products</li>
-        <li>Manage Categories</li>
-        <li>Orders</li>
-        <li>Customers</li>
-        <li>Analysis</li>
-        <li>Promotions</li>
-        <li>Settings</li>
-      </ul>
-    </aside>
+  <!-- SIDEBAR (optional simple) -->
+  <aside class="sidebar">
+    <h2>ADMIN PANEL</h2>
+    <nav>
+      <a class="active"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+      <a><i class="fas fa-box"></i> Products</a>
+      <a><i class="fas fa-shopping-cart"></i> Orders</a>
+      <a><i class="fas fa-users"></i> Customers</a>
+      <a><i class="fas fa-chart-line"></i> Analytics</a>
+      <a><i class="fas fa-cog"></i> Settings</a>
+    </nav>
+  </aside>
 
-   
-    <main class="main-content">
-      
-      <header class="top-bar">
-        <nav>
-          <a href="#">Home</a>
-          <a href="#">Shop</a>
-          <a href="#">Blog</a>
-          <a href="#">About</a>
-          <a href="#">Contact</a>
-          <a href="#">🛒</a>
-        </nav>
-        <div class="top-actions">
-          <input type="text" placeholder="Search">
-          <button class="admin-btn">Admin ▼</button>
+  <!-- TOP NAV -->
+  <header class="topbar">
+    <div class="brand"></div>
+    <div class="top-actions">
+      <div class="search">
+        <input id="globalSearch" placeholder="Search products or orders..." />
+        <button id="searchBtn"><i class="fas fa-search"></i></button>
+      </div>
+      <div class="user"><i class="fas fa-user-circle"></i> Admin</div>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="main">
+    <!-- quick stats -->
+    <section class="stats">
+      <div class="stat card">
+        <div class="label">Products</div>
+        <div id="statProducts" class="value">0</div>
+      </div>
+      <div class="stat card">
+        <div class="label">Orders</div>
+        <div id="statOrders" class="value">0</div>
+      </div>
+      <div class="stat card">
+        <div class="label">Total Sold</div>
+        <div id="statSold" class="value">0</div>
+      </div>
+    </section>
+
+    <!-- content grid -->
+    <section class="grid">
+      <!-- left column: product manager + table -->
+      <div class="col left">
+        <div class="card">
+          <div class="card-header">
+            <h3>Product Management</h3>
+            <button id="openAddProduct" class="btn primary"><i class="fas fa-plus"></i> Add Product</button>
+          </div>
+
+          <!-- Product Form (hidden by default) -->
+          <form id="productForm" class="product-form hidden">
+            <input type="hidden" id="productId" value="">
+            <div class="row">
+              <input id="productName" placeholder="Product name" required>
+              <input id="productCategory" placeholder="Category" required>
+            </div>
+            <div class="row">
+              <input id="productPrice" type="number" min="0" placeholder="Price (R)" required>
+              <input id="productStock" type="number" min="0" placeholder="Stock" required>
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="btn primary">Save</button>
+              <button type="button" id="cancelProduct" class="btn">Cancel</button>
+            </div>
+          </form>
+
+          <!-- Product Table -->
+          <div class="table-wrap">
+            <table id="productsTable">
+              <thead>
+                <tr>
+                  <th>ID</th><th>Name</th><th>Cat</th><th>Price</th><th>Stock</th><th>Sold</th><th>Actions</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
         </div>
-      </header>
+      </div>
 
-      
-      <section class="summary">
-        <div class="card total-sales">R15,320 <br><span>Total Sales</span></div>
-        <div class="card total-orders">150 <br><span>Total Orders</span></div>
-        <div class="card total-customers">600 <br><span>Total Customers</span></div>
-      </section>
-
-      
-      <section class="charts">
-        <div class="chart">
-          <h4>Sales overview</h4>
-          <img src="https://via.placeholder.com/150x100?text=Bar+Chart" alt="Sales Overview">
+      <!-- right column: charts + orders -->
+      <div class="col right">
+        <div class="card">
+          <h3>Analytics</h3>
+          <div class="charts-row">
+            <div class="chart-card">
+              <h4>Products Sold</h4>
+              <canvas id="soldChart"></canvas>
+            </div>
+            <div class="chart-card">
+              <h4>Category Split</h4>
+              <canvas id="catChart"></canvas>
+            </div>
+          </div>
         </div>
-        <div class="chart">
-          <h4>Site Visit</h4>
-          <img src="https://via.placeholder.com/150x100?text=Line+Chart" alt="Site Visit">
-        </div>
-      </section>
 
-      
-      <section class="orders">
-        <h4>Recent Orders</h4>
-        <table>
-          <thead>
-            <tr>
-              <th>Order ID</th>
-              <th>Customer</th>
-              <th>Date</th>
-              <th>Status</th>
-              <th>Qty</th>
-              <th>Total</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>#457</td>
-              <td>Lemons Mark</td>
-              <td>13/04/2025</td>
-              <td>✔</td>
-              <td>2</td>
-              <td>R253.00</td>
-            </tr>
-            <tr>
-              <td>#510</td>
-              <td>Steven Walker</td>
-              <td>14/04/2025</td>
-              <td>✔</td>
-              <td>1</td>
-              <td>R120.00</td>
-            </tr>
-            <tr>
-              <td>#614</td>
-              <td>Tracey Zulu</td>
-              <td>18/04/2025</td>
-              <td>✔</td>
-              <td>1</td>
-              <td>R487.00</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-    </main>
-  </div>
+        <div class="card">
+          <div class="card-header">
+            <h3>Recent Orders</h3>
+            <button id="clearOrders" class="btn">Clear</button>
+          </div>
+          <div class="table-wrap">
+            <table id="ordersTable">
+              <thead>
+                <tr><th>Order ID</th><th>Product</th><th>Qty</th><th>Total</th><th>Date</th></tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- script -->
+  <script src="admin.js"></script>
 </body>
 </html>
