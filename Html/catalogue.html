@@ -4,48 +4,37 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="stylesheet" href="../css/catalogue.css">
-  
-  
+  <link rel="stylesheet" href="../Javascript/catJS.js">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
   
   <title>Fashion Grove</title>
-
-</head>
+  </head>
 <body>
-<script src="../Javascript/catJS.js"></script>
 
+  <!-- Header -->
   <section id="header">
 
+      <!-- <a href="index.html" ><img src ="img/logo.png" class="logo" alt =" "></a>  -->
       <a href ="index.html"><h5 ></h5></a>
      
       <div>
         <ul id="navbar">
 		
-          <li><a class="active" href="index.html">Home</a></li>
+          <li><a href="index.html">Home</a></li>
 
-          
-          <li><a href ="Shop.html">Shop</a></li>
+          <!-- <li><a href ="index.html">Home</li> -->
+          <li><a class="active" href ="Shop.html">Shop</a></li>
           <li><a href ="Blog.html">Blog</a></li>
           <li><a href ="about.html">About</a></li>
           <li><a href ="contact.html">Contact</a></li>
           <li><a href ="cart.html "><i class="fa-solid fa-cart-shopping"></i></a></li>
         </ul>
-      </div>
+   
      </section>
-
-     <section id="hero">
-      <h4 >All what you need is here </h4>
-      <h2>New Fashion collection</h2>
-      <h1>every Season</h1>
-      <p>Get the best prices when shopping with us<br>
-      To find out more Show now with us</p>
-      <button> Shop Now</button>
-     </section>
-
-  
-  <div class="main-nav">
+	    </div>
+	  <div class="main-nav">
     <div class="menu-item" id="menMenu">
-      Men
+      <h4>Men</h4>
       <div class="dropdown">
         <div class="dropdown-section">
           <h4>Shirts</h4>
@@ -85,8 +74,8 @@
       </div>
     </div>
 
-    <div class="menu-item" id="womenMenu">Women</div>
-	 <div class="dropdown">
+    <div class="menu-item" id="womenMenu"><h4>Women</h4></div>
+	 <div class="dropdownw">
         <div class="dropdown-section">
           <h4>Shirts</h4>
           <ul>
@@ -102,7 +91,7 @@
           </ul>
         </div>
         <div class="dropdown-section">
-          <h4>Jackets</h4>
+          <h4>Hoodies</h4>
           <ul>
             <li>Puffer Jackets</li>
             <li>Hoodies</li>
@@ -110,21 +99,60 @@
         </div>
         <div class="dropdown-images">
           <div class="img-box">
-            <img src="jacket.png" alt="Jackets"/>
-            <div class="label">Jackets</div>
+            <img src="whood.jpg" alt="Hoodies"/>
+            <div class="label">Hoodies</div>
           </div>
           <div class="img-box">
-            <img src="shirt.png" alt="Shirts"/>
+            <img src="wshirt.jpg" alt="Shirts"/>
             <div class="label">Shirts</div>
           </div>
           <div class="img-box">
-            <img src="pants.png" alt="Denim"/>
+            <img src="woman.jpg" alt="Denim"/>
             <div class="label">Denim</div>
           </div>
         </div>
       </div>
 	  
-    <div class="menu-item" id="kid">Kids</div>
+    <div class="menu-item" id="kid"><h4>Kids</h4></div>
+	<div class="dropdown">
+        <div class="dropdown-section">
+          <h4>Shirts</h4>
+          <ul>
+            <li>Graphic Tees</li>
+            <li>T-Shirts</li>
+          </ul>
+        </div>
+        <div class="dropdown-section">
+          <h4>Shorts</h4>
+          <ul>
+            <li>Jeans</li>
+            <li>Shorts</li>
+          </ul>
+        </div>
+        <div class="dropdown-section">
+          <h4>Puffer Jackets</h4>
+          <ul>
+            <li>Puffer Jackets</li>
+            <li>Hoodies</li>
+          </ul>
+        </div>
+        <div class="dropdown-images">
+          <div class="img-box">
+            <img src="kpuff.png" alt="Jackets"/>
+            <div class="label">Puffer Jackets</div>
+          </div>
+          <div class="img-box">
+            <img src="kshirt.png" alt="Shirts"/>
+            <div class="label">Shirts</div>
+          </div>
+          <div class="img-box">
+            <img src="kshorts.png" alt="Denim"/>
+            <div class="label">Shorts</div>
+          </div>
+        </div>
+      </div>
+	  
+    <div class="menu-item sale" id="sale"><h4>Sale</h4></div>
 	<div class="dropdown">
         <div class="dropdown-section">
           <h4>Shirts</h4>
@@ -162,56 +190,394 @@
           </div>
         </div>
       </div>
-	  
-    <div class="menu-item sale" id="sale">Sale</div>
-	<div class="dropdown">
-        <div class="dropdown-section">
-          <h4>Shirts</h4>
-          <ul>
-            <li>Graphic Tees</li>
-            <li>T-Shirts</li>
-          </ul>
-        </div>
-        <div class="dropdown-section">
-          <h4>Denim</h4>
-          <ul>
-            <li>Jeans</li>
-            <li>Shorts</li>
-          </ul>
-        </div>
-        <div class="dropdown-section">
-          <h4>Jackets</h4>
-          <ul>
-            <li>Puffer Jackets</li>
-            <li>Hoodies</li>
-          </ul>
-        </div>
-        <div class="dropdown-images">
-          <div class="img-box">
-            <img src="jacket.png" alt="Jackets"/>
-            <div class="label">Jackets</div>
-          </div>
-          <div class="img-box">
-            <img src="shirt.png" alt="Shirts"/>
-            <div class="label">Shirts</div>
-          </div>
-          <div class="img-box">
-            <img src="pants.png" alt="Denim"/>
-            <div class="label">Denim</div>
-          </div>
-        </div>
-      </div>
-
-    
-    <div class="search-bar">
-      <input type="text" placeholder="Looking for something?" />
-      <i>🔍</i>
-    </div>
   </div>
   
+
+     <section id="hero">
+      <h4 >All what you need is here </h4>
+      <h2>New Fashion collection</h2>
+      <h1>every Season</h1>
+      <p>Get the best prices when shopping with us<br>
+      To find out more Show now with us</p>
+      <button> Shop Now</button>
+     </section>
+
+
+     <section id="product1" class="section-p1">
+      <h2>Featured Products</h2>
+      <p>Summer Collection New Modern Design</p>
+      <div class="pro-container">
+        <div class="pro">
+          <img src="../img/download1.jpeg">
+          <div class="description">
+            <span>adidas</span>
+            <h5>Cartoon Astronaut T-shirts</h5>
+            <div class="reviews">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <h4>R400</h4>
+          </div>
+          <div class="shopping">
+            <a href="#"><i class="fa-solid fa-cart-shopping" style="color: #088178;"></i></a>
+          </div>
+          
+        </div>
+      
+        <div class="pro">
+          <img src="../img/P4.jpeg">
+          <div class="description">
+            <span>adidas</span>
+            <h5>Cartoon Astronaut T-shirts</h5>
+            <div class="reviews">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <h4>R400</h4>
+          </div>
+          <div class="shopping">
+            <a href="#"><i class="fa-solid fa-cart-shopping" style="color: #088178;"></i></a>
+            </div>
+        </div>
+
+        <div class="pro">
+          <img src="../img/P5.jpeg">
+          <div class="description">
+            <span>adidas</span>
+            <h5>Cartoon Astronaut T-shirts</h5>
+            <div class="reviews">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <h4>R400</h4>
+          </div>
+
+         <div class="shopping">
+          <a href="#"><i class="fa-solid fa-cart-shopping" style="color: #088178;"></i></a>
+          </div>
+        </div>
+        <div class="pro">
+          <img src="../img/download1.jpeg">
+          <div class="description">
+            <span>adidas</span>
+            <h5>Cartoon Astronaut T-shirts</h5>
+            <div class="reviews">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <h4>R400</h4>
+          </div>
+          <div class="shopping">
+            <a href="#"><i class="fa-solid fa-cart-shopping" style="color: #088178;"></i></a>
+            </div>
+        </div>
+        
+        <div class="pro">
+          <img src="../img/download1.jpeg">
+          <div class="description">
+            <span>adidas</span>
+            <h5>Cartoon Astronaut T-shirts</h5>
+            <div class="reviews">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <h4>R400</h4>
+          </div>
+          <div class="shopping">
+            <a href="#"><i class="fa-solid fa-cart-shopping" style="color: #088178;"></i></a>
+            </div>
+        </div>
+
+        <div class="pro">
+          <img src="../img/download1.jpeg">
+          <div class="description">
+            <span>adidas</span>
+            <h5>Cartoon Astronaut T-shirts</h5>
+            <div class="reviews">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <h4>R400</h4>
+          </div>
+          <div class="shopping">
+            <a href="#"><i class="fa-solid fa-cart-shopping" style="color: #088178;"></i></a>
+            </div>
+        </div>
+
+        <div class="pro">
+          <img src="../img/download1.jpeg">
+          <div class="description">
+            <span>adidas</span>
+            <h5>Cartoon Astronaut T-shirts</h5>
+            <div class="reviews">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <h4>R400</h4>
+          </div>
+          <div class="shopping">
+            <a href="#"><i class="fa-solid fa-cart-shopping" style="color: #088178;"></i></a>
+            </div>
+        </div>
+
+        <div class="pro">
+          <img src="../img/download1.jpeg">
+          <div class="description">
+            <span>adidas</span>
+            <h5>Cartoon Astronaut T-shirts</h5>
+            <div class="reviews">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <h4>R400</h4>
+          </div>
+
+          <div class="shopping">
+            <a href="#"><i class="fa-solid fa-cart-shopping" style="color: #088178;"></i></a>
+          </div>
+        </div>
+       
+      </div>
+     </section>
+	 
+
+     <section id="product1" class="section-p1">
+      <h2>New Arrivals</h2>
+      <p>Winter Collection New Modern Design</p>
+
+      <div class="pro-container">
+        <div class="pro">
+          <img src="../img/download1.jpeg">
+          <div class="description">
+            <span>adidas</span>
+            <h5>Cartoon Astronaut T-shirts</h5>
+            <div class="reviews">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <h4>R400</h4>
+          </div>
+          <div class="shopping">
+            <a href="#"><i class="fa-solid fa-cart-shopping" style="color: #088178;"></i></a>
+          </div>
+        </div>
+
+        <div class="pro">
+          <img src="../img/download1.jpeg">
+          <div class="description">
+            <span>adidas</span>
+            <h5>Cartoon Astronaut T-shirts</h5>
+            <div class="reviews">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <h4>R400</h4>
+          </div>
+          <div class="shopping">
+            <a href="#"><i class="fa-solid fa-cart-shopping" style="color: #088178;"></i></a>
+          </div>
+        </div>
+
+        <div class="pro">
+          <img src="../img/download1.jpeg">
+          <div class="description">
+            <span>adidas</span>
+            <h5>Cartoon Astronaut T-shirts</h5>
+            <div class="reviews">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <h4>R400</h4>
+          </div>
+       <div class="shopping">
+            <a href="#"><i class="fa-solid fa-cart-shopping" style="color: #088178;"></i></a>
+          </div>
+        </div>
+        <div class="pro">
+          <img src="../img/download1.jpeg">
+          <div class="description">
+            <span>adidas</span>
+            <h5>Cartoon Astronaut T-shirts</h5>
+            <div class="reviews">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <h4>R400</h4>
+          </div>
+          <div class="shopping">
+            <a href="#"><i class="fa-solid fa-cart-shopping" style="color: #088178;"></i></a>
+          </div>
+        </div>
+        <div class="pro">
+          <img src="../img/download1.jpeg">
+          <div class="description">
+            <span>adidas</span>
+            <h5>Cartoon Astronaut T-shirts</h5>
+            <div class="reviews">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <h4>R400</h4>
+          </div><div class="shopping">
+            <a href="#"><i class="fa-solid fa-cart-shopping" style="color: #088178;"></i></a>
+          </div>
+        </div>
+        <div class="pro">
+          <img src="../img/download1.jpeg">
+          <div class="description">
+            <span>adidas</span>
+            <h5>Cartoon Astronaut T-shirts</h5>
+            <div class="reviews">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <h4>R400</h4>
+          </div>
+          <div class="shopping">
+            <a href="#"><i class="fa-solid fa-cart-shopping" style="color: #088178;"></i></a>
+          </div>
+        </div>
+        <div class="pro">
+          <img src="../img/download1.jpeg">
+          <div class="description">
+            <span>adidas</span>
+            <h5>Cartoon Astronaut T-shirts</h5>
+            <div class="reviews">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <h4>R400</h4>
+          </div>
+          <div class="shopping">
+            <a href="#"><i class="fa-solid fa-cart-shopping" style="color: #088178;"></i></a>
+          </div>
+        </div>
+        <div class="pro">
+          <img src="../img/download1.jpeg">
+          <div class="description">
+            <span>adidas</span>
+            <h5>Cartoon Astronaut T-shirts</h5>
+            <div class="reviews">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <h4>R400</h4>
+          </div>
+          <div class="shopping">
+            <a href="#"><i class="fa-solid fa-cart-shopping" style="color: #088178;"></i></a>
+          </div>
+        </div>
+       
+      </div>
+     </section>
+      
+
+
+    <section id="newsletter"  class="section-p1 section-m1" >
+      <div class="newstext"></div>
+      <h4> Sign Up For Newsletter</h4>
+      <p>Get E-mail updates about our latest deals and <span>special offers.</span></p>
+      <div class="form">
+        <input type="text" placeholder="Your email address">
+        <button class="normal">Sign Up</button>
+      </div>
+     </section>
+
+
   <footer>
-  <p>&copy; 2025 FashionGroove. All rights reserved.</p>
+    <div class="footer-content">
+      <div class="footer-column">
+        <h3>Fashion Groove</h3>
+        <p>Celebrating Black excellence through quality products.</p>
+      </div>
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="about%20page.html">About Us</a></li>
+          <li><a href="Contact%20page.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Help</h3>
+        <ul>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#">Shipping Policy</a></li>
+          <li><a href="#">Returns & Exchanges</a></li>
+          <li><a href="#">Size Guide</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Contact Us</h3>
+        <ul>
+          <li><i class="fas fa-envelope"></i> Fashiongroove@gmail.com</li>
+          <li><i class="fas fa-phone"></i> (021) 456-7890</li>
+          <li><i class="fas fa-map-marker-alt"></i> 10 Dosert Rd,Woodstock 7925, Cape Town</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="social-footer">
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-pinterest"></i></a>
+      <a href="#"><i class="fab fa-tiktok"></i></a>
+    </div>
+    
   </footer>
+</div>
+</div>
+</footer>
 
 </body>
 </html>
