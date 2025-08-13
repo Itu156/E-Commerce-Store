@@ -5,6 +5,11 @@
       box-sizing: border-box;
     }
 
+    html {
+  scroll-behavior: smooth;
+}
+
+
     body {
       font-family: Arial, sans-serif;
       background-color: #e6e9f4;
@@ -37,6 +42,16 @@
   top: 0;
   left:0;
 }
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: #1a1a1a;
+  text-decoration: none;
+  margin-left: -50px;
+}
+
+
 /*navigation*/
 
 #navbar{
@@ -227,14 +242,6 @@
       }
     }
 	
-	
-
-
-
-
-
-
-
 
 #feature{
   display:flex;
