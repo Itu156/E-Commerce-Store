@@ -4,12 +4,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Us | MyStore</title>
+  <title>About Us | Fashion Groove</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     :root {
-      --primary: #FF85A2;
-      --secondary: #FFD6E0;
+      --primary: #088178;
+      --secondary: #e2f3f1;
       --accent: #A0E7E5;
       --dark: #333;
       --light: #FFF9FB;
@@ -45,13 +45,6 @@
       font-size: 28px;
       font-weight: 700;
       color: var(--primary);
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    
-    .logo i {
-      font-size: 32px;
     }
 
     nav {
@@ -306,9 +299,9 @@
       margin-bottom: 15px;
     }
     
-    /* Footer */
+    /* Footer - Updated to Black */
     footer {
-      background: var(--primary);
+      background: #000000;
       color: white;
       padding: 60px;
       text-align: center;
@@ -328,6 +321,7 @@
       margin-bottom: 20px;
       position: relative;
       display: inline-block;
+      color: #ffffff;
     }
     
     .footer-column h3::after {
@@ -335,13 +329,14 @@
       position: absolute;
       width: 50%;
       height: 3px;
-      background: white;
+      background: var(--primary);
       bottom: -8px;
       left: 0;
     }
     
     .footer-column ul {
       list-style: none;
+      padding: 0;
     }
     
     .footer-column ul li {
@@ -349,20 +344,21 @@
     }
     
     .footer-column ul li a {
-      color: white;
+      color: #cccccc;
       text-decoration: none;
       transition: all 0.3s ease;
     }
     
     .footer-column ul li a:hover {
-      color: var(--accent);
+      color: var(--primary);
       padding-left: 5px;
     }
     
     .footer-bottom {
       margin-top: 40px;
       padding-top: 20px;
-      border-top: 1px solid rgba(255,255,255,0.2);
+      border-top: 1px solid rgba(255,255,255,0.1);
+      color: #aaaaaa;
     }
     
     .social-footer {
@@ -379,7 +375,7 @@
     }
     
     .social-footer a:hover {
-      color: var(--accent);
+      color: var(--primary);
       transform: scale(1.2);
     }
     
@@ -414,6 +410,20 @@
         top: -10px;
         font-size: 1.2rem;
       }
+      
+      footer {
+        padding: 40px 20px;
+      }
+      
+      .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      
+      .footer-column h3::after {
+        left: 50%;
+        transform: translateX(-50%);
+      }
     }
   </style>
 </head>
@@ -421,22 +431,21 @@
 <body>
   <header>
     <div class="logo">
-      <i class="fas fa-heart"></i>
-      <span>MyStore</span>
+      Fashion Groove
     </div>
     <nav>
       <a href="index.html">Home</a>
       <a href="shop.html">Shop</a>
       <a href="about%20page.html">About</a>
       <a href="Contact%20page.html">Contact</a>
-      <a href="customer-engagement%20page.html">Community</a>
+      <a href="customer-engagement%20page.html">Customer Engagement</a>
     </nav>
   </header>
 
   <main class="container">
     <section class="hero">
-      <h1>Our Story</h1>
-      <p>Welcome to MyStore, where passion meets purpose! We're on a mission to bring joy to your everyday life with our carefully curated collection of adorable and high-quality products.</p>
+      <h1>About Us</h1>
+      <p>Welcome to Fashion Groove, where passion meets purpose! We're on a mission to bring joy to your everyday life with our carefully curated collection of adorable and high-quality products.</p>
       
     
     <section class="about-section">
@@ -445,8 +454,8 @@
       </div>
       <div class="about-content">
         <h2>How We Started</h2>
-        <p>Founded in 2025, MyStore started as a small online shop with just few products. Today, were aiming to grow into a beloved brand with thousands of happy customers worldwide!</p>
-        <p>"I wanted to create a space where people get clothes they want delivered to their door step,". "Every product in our store is carefully selected to bring a smile to your face while celebrating different fashion styles."</p>
+        <p>Founded in 2025, Fashion Groove started as a small online shop with just few products. Today, were aiming to grow into a beloved brand with thousands of happy customers worldwide!</p>
+        <p>"I wanted to create a space where people get clothes they want delivered to their door step". "Every product in our store is carefully selected to bring a smile to your face while celebrating different fashion styles."</p>
       </div>
     </section>
     
@@ -468,7 +477,7 @@
       </div>
     </section>
     
-            <section class="team-section">
+    <section class="team-section">
       <h2>Meet Our Team</h2>
       <div class="team-grid">
         <div class="team-member">
@@ -477,7 +486,7 @@
           </div>
           <h3>Itumeleng Bedesho</h3>
           <p>Founder & CEO</p>
-          <p>The visionary behind MyStore who believes in spreading happiness through culturally-inspired products.</p>
+          <p>The visionary behind Fashion Groove who believes in spreading happiness through culturally-inspired products.</p>
           <div class="social-links">
             <a href="#"><i class="fab fa-twitter"></i></a>
             <a href="#"><i class="fab fa-instagram"></i></a>
@@ -577,8 +586,8 @@
   <footer>
     <div class="footer-content">
       <div class="footer-column">
-        <h3>MyStore</h3>
-        <p>Celebrating Black excellence through quality products.</p>
+        <h3>Fashion Groove</h3>
+        <p>Your premier destination for stylish and comfortable fashion.</p>
       </div>
       <div class="footer-column">
         <h3>Quick Links</h3>
@@ -601,9 +610,9 @@
       <div class="footer-column">
         <h3>Contact Us</h3>
         <ul>
-          <li><i class="fas fa-envelope"></i> hello@mystore.com</li>
+          <li><i class="fas fa-envelope"></i> hello@fashiongroove.com</li>
           <li><i class="fas fa-phone"></i> (123) 456-7890</li>
-          <li><i class="fas fa-map-marker-alt"></i> 10 Dosert Rd,Woodstock 7925, Cape Town</li>
+          <li><i class="fas fa-map-marker-alt"></i> 10 Dosert Rd, Woodstock 7925, Cape Town</li>
         </ul>
       </div>
     </div>
@@ -616,9 +625,7 @@
       <a href="#"><i class="fab fa-tiktok"></i></a>
     </div>
     
-    <div class="footer-bottom">
-      <p>&copy; 2025 MyStore. All rights reserved. | Designed with <i class="fas fa-heart" style="color: var(--accent);"></i> by Our Team</p>
-    </div>
+    
   </footer>
 </body>
 </html>
