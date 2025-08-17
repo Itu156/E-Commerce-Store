@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopping Cart - Online Clothing Store</title>
-    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="../css/cart.css">
 
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -12,22 +12,31 @@
 <body>
 
     <!-- Header / Navbar -->
-    <header class="navbar">
-        <div class="logo">
-            <i class="fa-solid fa-store"></i> <!-- Store Icon -->
+    <section id="header">
+
+        <!-- <a href="index.html" ><img src ="img/logo.png" class="logo" alt =" "></a>  -->
+        <a href ="index.html"><h5 >Itu</h5></a>
+       
+        <div>
+          <ul id="navbar">
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href ="catalogue.html">Shop</a></li>
+            <li><a href ="Blog.html">Blog</a></li>
+            <li><a href ="about page.html">About</a></li>
+            <li><a href ="contact.html">Contact</a></li>
+            <li><a href ="cart.html "><i class="fa-solid fa-cart-shopping"></i></a></li>
+            <li class="dropdown">
+              <a href="#"><i class="fa-solid fa-circle-user"></i></a>
+              <ul class="dropdown-menu">
+                <li><a href="admin-login.html">Admin</a></li>
+                <li><a href="user-login.html">User</a></li>
+              </ul>
+            </li>
+  
+          </ul>
         </div>
-        <nav>
-            <a href="#"><i class="fa-solid fa-house"></i> Home</a>
-            <a href="#"><i class="fa-solid fa-shirt"></i> Shop</a>
-            <a href="#"><i class="fa-solid fa-blog"></i> Blog</a>
-            <a href="#"><i class="fa-solid fa-circle-info"></i> About</a>
-            <a href="#"><i class="fa-solid fa-user-plus"></i> Register</a>
-        </nav>
-        <div class="icons">
-            <span class="cart-icon"><i class="fa-solid fa-cart-shopping"></i></span>
-            <span class="user-icon"><i class="fa-solid fa-user"></i></span>
-        </div>
-    </header>
+       </section>
+  
 
     <h>My Cart Items</h>
     <!-- Shopping Cart Section -->
