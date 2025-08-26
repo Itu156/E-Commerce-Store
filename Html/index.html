@@ -27,7 +27,12 @@
           <li><a href ="Blog.html">Blog</a></li>
           <li><a href ="about page.html">About</a></li>
           <li><a href ="contact.html">Contact</a></li>
-          <li><a href ="cart.html "><i class="fa-solid fa-cart-shopping"></i></a></li>
+
+          <li><a href ="cart.html ">
+          <i class="fa-solid fa-cart-shopping"></i>
+         <span class="cart-count"></span>
+         </a></li>
+
           <li class="dropdown">
             <a href="#"><i class="fa-solid fa-circle-user"></i></a>
             <ul class="dropdown-menu">
@@ -35,8 +40,7 @@
               <li><a href="user-login.html">User</a></li>
             </ul>
           </li>
-          
-
+      
         </ul>
       </div>
      </section>
@@ -253,9 +257,11 @@
      <section id="product1" class="section-p1">
       <h2>New Arrivals</h2>
       <p>Winter Collection New Modern Design</p>
+       
 
+<!-- Example for one product (you should add similar to all products) -->
       <div class="pro-container">
-        <div class="pro">
+        <div class="pro"  data-id="1" data-name="Women's Lara Leather" data-price="2800"  data-brand="Fashiongroove" data-img="../img/Leather2.jpg">
           <img src="../img/Leather2.jpg">
           <div class="description">
             <span>Fashiongroove</span>
@@ -270,11 +276,11 @@
             <h4>R2800</h4>
           </div>
           <div class="shopping">
-            <a href="cart.html"><i class="fa-solid fa-cart-shopping" style="color: #088178;"></i></a>
+            <a href="cart.html" class="add-to-cart"><i class="fa-solid fa-cart-shopping" style="color: #088178;"></i></a>
           </div>
         </div>
 
-        <div class="pro">
+        <div class="pro" data-id="2" data-name="Mens Clyde genuine" data-price="3000"  data-brand="Fashiongroove" data-img="../img/Leather1.jpg">
           <img src="../img/Leather1.jpg">
           <div class="description">
             <span>Fashiongroove</span>
@@ -289,11 +295,11 @@
             <h4>R3000</h4>
           </div>
           <div class="shopping">
-            <a href="cart.html"><i class="fa-solid fa-cart-shopping" style="color: #088178;"></i></a>
+            <a href="cart.html" class="add-to-cart"><i class="fa-solid fa-cart-shopping" style="color: #088178;"></i></a>
           </div>
         </div>
 
-        <div class="pro">
+        <div class="pro" data-id="3" data-name="Women's Lara Leather" data-price="3299"  data-brand="Fashiongroove" data-img="../img/Leather3.jpg">
           <img src="../img/Leather3.jpg">
           <div class="description">
             <span>Fashiongroove</span>
@@ -308,10 +314,11 @@
             <h4>R3299</h4>
           </div>
        <div class="shopping">
-            <a href="cart.html"><i class="fa-solid fa-cart-shopping" style="color: #088178;"></i></a>
+            <a href="cart.html" class="add-to-cart"><i class="fa-solid fa-cart-shopping" style="color: #088178;"></i></a>
           </div>
         </div>
-        <div class="pro">
+
+        <div class="pro" data-id="4" data-name="Womens amy Jacket" data-price="2799"  data-brand="Fashiongroove" data-img="../img/Leather4.jpg">
           <img src="../img/Leather4.jpg">
           <div class="description">
             <span>Fashiongroove</span>
@@ -326,10 +333,10 @@
             <h4>R2799</h4>
           </div>
           <div class="shopping">
-            <a href="cart.html"><i class="fa-solid fa-cart-shopping" style="color: #088178;"></i></a>
+            <a href="cart.html" class="add-to-cart"><i class="fa-solid fa-cart-shopping" style="color: #088178;"></i></a>
           </div>
         </div>
-        <div class="pro">
+        <div class="pro" data-id="5" data-name="Females Lara Leather" data-price="4500"  data-brand="Fashiongroove" data-img="../img/Leather5.jpg">
           <img src="../img/Leather5.jpg">
           <div class="description">
             <span>Fashiongroove</span>
@@ -343,10 +350,11 @@
             </div>
             <h4>R4500</h4>
           </div><div class="shopping">
-            <a href="cart.html"><i class="fa-solid fa-cart-shopping" style="color: #088178;"></i></a>
+            <a href="cart.html" class="add-to-cart"><i class="fa-solid fa-cart-shopping" style="color: #088178;"></i></a>
           </div>
         </div>
-        <div class="pro">
+
+        <div class="pro" data-id="6" data-name="Females Johhny Leather" data-price="1500"  data-brand="Fashiongroove" data-img="../img/Leather6.jpg">
           <img src="../img/Leather6.jpg">
           <div class="description">
             <span>Fashiongroove</span>
@@ -361,10 +369,10 @@
             <h4>R1500</h4>
           </div>
           <div class="shopping">
-            <a href="cart.html"><i class="fa-solid fa-cart-shopping" style="color: #088178;"></i></a>
+            <a href="cart.html" class="add-to-cart"><i class="fa-solid fa-cart-shopping" style="color: #088178;"></i></a>
           </div>
         </div>
-        <div class="pro">
+        <div class="pro" data-id="7" data-name="Mens Logan" data-price="2800"  data-brand="Fashiongroove" data-img="../img/Leather7.jpg">
           <img src="../img/Leather7.jpg">
           <div class="description">
             <span>Fashiongroove</span>
@@ -379,10 +387,11 @@
             <h4>R2600</h4>
           </div>
           <div class="shopping">
-            <a href="cart.html"><i class="fa-solid fa-cart-shopping" style="color: #088178;"></i></a>
+            <a href="cart.html" class="add-to-cart"><i class="fa-solid fa-cart-shopping" style="color: #088178;"></i></a>
           </div>
         </div>
-        <div class="pro">
+
+        <div class="pro" data-id="8" data-name="Mens Johhny Leather" data-price="2800"  data-brand="Fashiongroove" data-img="../img/Leather8.jpg">
           <img src="../img/Leather8.jpg">
           <div class="description">
             <span>Fashiongroove</span>
@@ -397,7 +406,7 @@
             <h4>R2800</h4>
           </div>
           <div class="shopping">
-            <a href="cart.html"><i class="fa-solid fa-cart-shopping" style="color: #088178;"></i></a>
+            <a href="cart.html" class="add-to-cart"><i class="fa-solid fa-cart-shopping" style="color: #088178;"></i></a>
           </div>
         </div>
        
@@ -492,7 +501,66 @@
 </div>
 </div>
 </footer>
+<script>
+  // cart.js
+document.addEventListener('DOMContentLoaded', function() {
+  // Initialize cart array in localStorage if it doesn't exist
+  if (!localStorage.getItem('cart')) {
+    localStorage.setItem('cart', JSON.stringify([]));
+  }
 
+  // Add click event to all "Add to Cart" buttons
+  document.querySelectorAll('.add-to-cart').forEach(button => {
+    button.addEventListener('click', function(e) {
+      e.preventDefault();
+      const productElement = this.closest('.pro');
+      
+      // Get product details from data attributes
+      const product = {
+        id: productElement.dataset.id,
+        name: productElement.querySelector('h5').textContent,
+        price: productElement.dataset.price,
+        brand: productElement.querySelector('span').textContent,
+        img: productElement.querySelector('img').src,
+        quantity: 1
+      };
+
+      addToCart(product);
+      alert('Product added to cart!');
+    });
+  });
+
+  function addToCart(product) {
+    let cart = JSON.parse(localStorage.getItem('cart'));
+    
+    // Check if product already exists in cart
+    const existingProduct = cart.find(item => item.id === product.id);
+    
+    if (existingProduct) {
+      existingProduct.quantity += 1;
+    } else {
+      cart.push(product);
+    }
+    
+    localStorage.setItem('cart', JSON.stringify(cart));
+    updateCartCount();
+  }
+
+  function updateCartCount() {
+    const cart = JSON.parse(localStorage.getItem('cart'));
+    const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
+    
+    // Update cart count in navbar (you'll need to add an element for this)
+    const cartCountElement = document.querySelector('.cart-count');
+    if (cartCountElement) {
+      cartCountElement.textContent = totalItems;
+    }
+  }
+
+  // Initialize cart count on page load
+  updateCartCount();
+});
+</script>
    
   </body>
 
