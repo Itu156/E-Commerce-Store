@@ -53,5 +53,56 @@
       </form>
     </div>
   </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const orderSummary = document.querySelector('.order-summary');
+    
+        if (cart.length === 0) {
+            orderSummary.innerHTML = `<p>Your cart is empty. <a href="catalogue.html">Go shopping</a></p>`;
+            return;
+        }
+    
+        // Clear existing static product
+        const existingProduct = orderSummary.querySelector('.product');
+        if (existingProduct) existingProduct.remove();
+    
+        let subtotal = 0;
+    
+        cart.forEach(item => {
+            const itemTotal = item.price * item.quantity;
+            subtotal += itemTotal;
+    
+            const productDiv = document.createElement('div');
+            productDiv.className = 'product';
+            productDiv.innerHTML = `
+                <div class="product-img">
+                    <img src="${item.img}" alt="${item.name}" width="80" height="80">
+                </div>
+                <div class="product-details">
+                    <p><strong>${item.name}</strong></p>
+                    <p>Brand: ${item.brand} | Quantity: ${item.quantity}</p>
+                    <p>Price: R${item.price},00 | Total: R${itemTotal},00</p>
+                </div>
+            `;
+            orderSummary.insertBefore(productDiv, orderSummary.querySelector('.price-breakdown'));
+        });
+    
+        // Update subtotal, total
+        const priceBreakdown = orderSummary.querySelector('.price-breakdown');
+        const shipping = 150; // example shipping
+        const discount = 0;   // example discount
+        const total = subtotal + shipping - discount;
+    
+        priceBreakdown.innerHTML = `
+            <p>Subtotal: <span>R${subtotal},00</span></p>
+            <p>Discount: <span>R${discount},00</span></p>
+            <p>Shipping: <span>R${shipping},00</span></p>
+            <hr>
+            <p class="total">Total: <span>R${total},00</span></p>
+        `;
+    });
+    </script>
+    
 </body>
 </html>

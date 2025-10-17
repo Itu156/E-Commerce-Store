@@ -79,12 +79,22 @@ body {
   top: 0;
   left:0;
 }
-/*navigation*/
 
+#header a{
+  text-decoration: none;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 24px;
+  letter-spacing: 1px;
+}
+/*navigation*/
 #navbar{
   display :flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 
 }
 
@@ -443,12 +453,12 @@ background-color: transparent;
 cursor:pointer;
 border:1px solid white;
 outline:none;
-transition:0.2s;
+transition:0.3s ease-in-out;
 
 }
-#snd-banner banner-box:hover button{
+#snd-banner .banner-box:hover button{
   background: #088178;
-  border: 1px solid #cce7d0
+  border: 1px solid #cce7d0;
 }
 #banner3{
   display:flex;

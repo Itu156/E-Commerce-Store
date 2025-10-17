@@ -163,16 +163,26 @@
         }
     });
 
-    // Checkout button
+    // // Checkout button
+    // checkoutBtn.addEventListener("click", () => {
+    //     if (cart.length === 0) {
+    //         alert("Your cart is empty! Please add items before checking out.");
+    //     } else {
+    //         // Here you would typically redirect to a checkout page
+    //         alert(`Proceeding to checkout. Total: ${subtotalElement.textContent}`);
+    //         // window.location.href = "checkout.html";
+    //     }
+    // });
     checkoutBtn.addEventListener("click", () => {
-        if (cart.length === 0) {
-            alert("Your cart is empty! Please add items before checking out.");
-        } else {
-            // Here you would typically redirect to a checkout page
-            alert(`Proceeding to checkout. Total: ${subtotalElement.textContent}`);
-            // window.location.href = "checkout.html";
-        }
-    });
+    if (cart.length === 0) {
+        alert("Your cart is empty! Please add items before checking out.");
+    } else {
+        // Save cart to localStorage (already done, just to be sure)
+        localStorage.setItem('cart', JSON.stringify(cart));
+        // Navigate to checkout page
+        window.location.href = "checkout.html";
+    }
+});
 
     // Update cart count in navbar
     function updateCartCount() {

@@ -12,23 +12,57 @@
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <!--FontAwesome Link-->
     <script src="https://kit.fontawesome.com/8f4dd639f5.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
-   <div class="admin-container">
+  <div class="admin-container">
     <div class="myform">
-      <form>
+      <form id="loginForm">
         <h2>User LOGIN</h2>
-        <!-- <input type="text" placeholder="Name" required> -->
-		<input type="text" placeholder="Email" required>
-        <input type="password" placeholder="Password" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="password" id="password" placeholder="Password" required>
         <button type="submit">LOGIN</button>
-		<br><br>
-		Not a member? <a href="Signup.html" target="_blank">Sign up</a>
+        <br><br>
+        Not a member yet? <a href="SignUp.html">Sign up</a>
       </form>
     </div>
     <div class="image">
       <img src="../img/image.jpg">
     </div>
   </div>
+  
+
+  <script>
+    document.querySelector("form").addEventListener("submit", async function(e) {
+      e.preventDefault(); // stop page refresh
+  
+      const email = document.querySelector("input[type='email']").value;
+      const password = document.querySelector("input[type='password']").value;
+  
+      const loginData = { email, password };
+  
+      try {
+        const response = await fetch("http://localhost:8080/user/login", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(loginData)
+        });
+  
+        if (response.ok) {
+          alert("Login successful ✅");
+          // redirect to homepage/dashboard
+          window.location.href = "/Html/index.html";
+        } else if (response.status === 401) {
+          alert("Invalid email or password ❌");
+        } else {
+          alert("Something went wrong. Please try again.");
+        }
+      } catch (error) {
+        console.error("Error:", error);
+        alert("Could not connect to server.");
+      }
+    });
+  </script>
+  
 </body>
 </html>
