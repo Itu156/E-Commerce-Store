@@ -55,8 +55,8 @@
   
       <!-- ======================= FEATURED PRODUCTS SECTION ======================= -->
       <section id="product1" class="section-p1">
-        <h2>Featured Products</h2>
-        <p>Summer Collection New Modern Design</p>
+        <h2>Women's Collection</h2>
+        <p>Where elegance meets comfort. Discover trendy fits, bold looks, and everyday essentials made just for you.</p>
           <!-- Example for one product (you should add similar to all products) -->
             <!-- ======================= 1st PRODUCT ======================= -->
         <div class="pro-container">
@@ -421,6 +421,13 @@
 </div>
 </footer>
 <script>
+  // highlight active page automatically
+  const currentPage = window.location.pathname.split("/").pop();
+  document.querySelectorAll('.main-nav a').forEach(link => {
+    if (link.getAttribute('href') === currentPage) {
+      link.classList.add('active-category');
+    }
+  });
   // Attach click event to all product cards
   // Select all products
   const products = document.querySelectorAll(".pro");
@@ -504,3 +511,4 @@
      
 </body>
 </html>
+  

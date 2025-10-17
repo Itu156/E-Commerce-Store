@@ -10,7 +10,7 @@
   
   <title>Fashion Grove</title>
   </head>
-<body>
+<body class="">
 
   <!-- Header -->
   <section id="header">
@@ -55,8 +55,8 @@
   
       <!-- ======================= FEATURED PRODUCTS SECTION ======================= -->
       <section id="product1" class="section-p1">
-        <h2>Featured Products</h2>
-        <p>Summer Collection New Modern Design</p>
+        <h2>Kids Streetwear</h2>
+        <p>Big style for the little ones — explore casual fits, comfy sneakers, and bold looks they’ll love every day.</p>
           <!-- Example for one product (you should add similar to all products) -->
             <!-- ======================= 1st PRODUCT ======================= -->
         <div class="pro-container">
@@ -215,8 +215,8 @@
 	 
 
      <section id="product1" class="section-p1">
-      <h2>New Arrivals</h2>
-      <p>Winter Collection New Modern Design</p>
+      <h2>New Generation</h2>
+      <p>For lil goofy ahh ahh Monkeys like.....🥀🫩</p>
 
        <!-- Example for one product (you should add similar to all products) -->
             <!-- ======================= 1st PRODUCT ======================= -->
@@ -421,6 +421,13 @@
 </div>
 </footer>
 <script>
+  // highlight active page automatically
+  const currentPage = window.location.pathname.split("/").pop();
+  document.querySelectorAll('.main-nav a').forEach(link => {
+    if (link.getAttribute('href') === currentPage) {
+      link.classList.add('active-category');
+    }
+  });
   // Attach click event to all product cards
   // Select all products
   const products = document.querySelectorAll(".pro");
@@ -504,3 +511,4 @@
      
 </body>
 </html>
+ 
