@@ -7,27 +7,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Ecommerce Store</title>
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" /> 
+   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /> -->
+
     <link rel="stylesheet" href="../css/index.css">
     
   </head>
   <body>
 
       <section id="header">
-
       <!-- <a href="index.html" ><img src ="img/logo.png" class="logo" alt =" "></a>  -->
-      <a href ="index.html"><h5 ></h5></a>
-     
+        <a href="#">
+          <!-- Logo text -->
+          <h5 class="logo">
+            <span style="color:black;">Fashion</span><span style="color:#088178;">Groove</span>
+          </h5>
+        </a>
       <div>
         <ul id="navbar">
           <li><a class="active" href="index.html">Home</a></li>
-
-          <!-- <li><a href ="index.html">Home</li> -->
-          <li><a href ="Shop.html">Shop</a></li>
+          <li><a href ="catalogue.html">Shop</a></li>
           <li><a href ="Blog.html">Blog</a></li>
-          <li><a href ="about.html">About</a></li>
+          <li><a href ="about page.html">About</a></li>
           <li><a href ="contact.html">Contact</a></li>
-          <li><a href ="cart.html "><i class="fa-solid fa-cart-shopping"></i></a></li>
+
+          <li><a href ="cart.html ">
+          <i class="fa-solid fa-cart-shopping"></i>
+         <span class="cart-count"></span>
+         </a></li>
+
+          <li class="dropdown">
+            <a href="#"><i class="fa-solid fa-circle-user"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="admin-login.html">Admin</a></li>
+              <li><a href="user-login.html">User</a></li>
+            </ul>
+          </li>
+      
         </ul>
       </div>
      </section>
@@ -38,7 +54,8 @@
       <h1>every Season</h1>
       <p>Get the best prices when shopping with us<br>
       To find out more Show now with us</p>
-      <button> Shop Now</button>
+      <button onclick="window.location.href='catalogue.html'">Shop Now</button>
+      <!-- <button> Shop Now</button> -->
      </section>
 
      <section id="feature" class="section-p1">
@@ -73,16 +90,56 @@
         <h6>24/7 Support</h6>
       </div>
      </section>
-
+    <!-- ======================= FEATURED PRODUCTS SECTION ======================= -->
      <section id="product1" class="section-p1">
       <h2>Featured Products</h2>
       <p>Summer Collection New Modern Design</p>
+        <!-- Example for one product (you should add similar to all products) -->
+          <!-- ======================= 1st PRODUCT ======================= -->
       <div class="pro-container">
-        <div class="pro">
+        <div class="pro"  data-id="12" data-name="Cartoon Astronaut T-shirts" data-price="800"  data-brand="adidas" data-img="../img/download1.jpeg" onclick="window.location.href='../Html/ProductPage.html'">
           <img src="../img/download1.jpeg">
           <div class="description">
-            <span>adidas</span>
+            <span>Addidas</span>
             <h5>Cartoon Astronaut T-shirts</h5>
+            <div class="reviews">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <h4>R800</h4>
+          </div>
+          <div class="shopping">
+            <a href="cart.html" class="add-to-cart"><i class="fa-solid fa-cart-shopping" style="color: #088178;"></i></a>
+          </div>
+        </div>
+<!-- ======================= 2nd PRODUCT ======================= -->
+        <div class="pro"  data-id="13" data-name="Space Astronaut T-shirts" data-price="400"  data-brand="Fashiongroove" data-img="../img/P4.jpeg" onclick="window.location.href='../Html/ProductPage.html'">
+          <img src="../img/P4.jpeg">
+          <div class="description">
+            <span>Fashiongroove</span>
+            <h5>Space Astronaut T-shirts</h5>
+            <div class="reviews">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <h4>R800</h4>
+          </div>
+          <div class="shopping">
+            <a href="cart.html" class="add-to-cart"><i class="fa-solid fa-cart-shopping" style="color: #088178;"></i></a>
+          </div>
+        </div>
+<!-- ======================= 3rd PRODUCT ======================= -->
+        <div class="pro" data-id="14" data-name="Space Astronaut T-shirts" data-price="400"  data-brand="Fashiongroove" data-img="../img/P5.jpeg">
+          <img src="../img/P5.jpeg" onclick="window.location.href='../Html/ProductPage.html'">
+          <div class="description">
+            <span>Fashiongroove</span>
+            <h5>Black space Astronaut T-shirts</h5>
             <div class="reviews">
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
@@ -92,12 +149,15 @@
             </div>
             <h4>R400</h4>
           </div>
-          <a href="#"><i class="fa-solid fa-cart-plus cart" ></i></a>
+           <div class="shopping">
+            <a href="cart.html" class="add-to-cart"><i class="fa-solid fa-cart-shopping" style="color: #088178;"></i></a>
+          </div>
         </div>
-        <div class="pro">
+<!-- ======================= 4th PRODUCT ======================= -->
+         <div class="pro"  data-id="12" data-name="Cartoon Astronaut T-shirts" data-price="2800"  data-brand="adidas" data-img="../img/download1.jpeg" onclick="window.location.href='../Html/ProductPage.html'">
           <img src="../img/download1.jpeg">
           <div class="description">
-            <span>adidas</span>
+            <span>Addidas</span>
             <h5>Cartoon Astronaut T-shirts</h5>
             <div class="reviews">
               <i class="fas fa-star"></i>
@@ -106,14 +166,17 @@
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
             </div>
-            <h4>R400</h4>
+            <h4>R800</h4>
           </div>
-          <a href="#"><i class="fa-solid fa-cart-plus cart" ></i></a>
+          <div class="shopping">
+            <a href="cart.html" class="add-to-cart"><i class="fa-solid fa-cart-shopping" style="color: #088178;"></i></a>
+          </div>
         </div>
-        <div class="pro">
+        <!-- ======================= 5th PRODUCT ======================= -->
+        <div class="pro"  data-id="12" data-name="Cartoon Astronaut T-shirts" data-price="2800"  data-brand="adidas" data-img="../img/download1.jpeg" onclick="window.location.href='../Html/ProductPage.html'">
           <img src="../img/download1.jpeg">
           <div class="description">
-            <span>adidas</span>
+            <span>Addidas</span>
             <h5>Cartoon Astronaut T-shirts</h5>
             <div class="reviews">
               <i class="fas fa-star"></i>
@@ -122,14 +185,17 @@
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
             </div>
-            <h4>R400</h4>
+            <h4>R800</h4>
           </div>
-          <a href="#"><i class="fa-solid fa-cart-plus cart" ></i></a>
+          <div class="shopping">
+            <a href="cart.html" class="add-to-cart"><i class="fa-solid fa-cart-shopping" style="color: #088178;"></i></a>
+          </div>
         </div>
-        <div class="pro">
+<!-- ======================= 6th PRODUCT ======================= -->
+        <div class="pro"  data-id="12" data-name="Cartoon Astronaut T-shirts" data-price="2800"  data-brand="adidas" data-img="../img/download1.jpeg" onclick="window.location.href='../Html/ProductPage.html'">
           <img src="../img/download1.jpeg">
           <div class="description">
-            <span>adidas</span>
+            <span>Addidas</span>
             <h5>Cartoon Astronaut T-shirts</h5>
             <div class="reviews">
               <i class="fas fa-star"></i>
@@ -138,14 +204,17 @@
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
             </div>
-            <h4>R400</h4>
+            <h4>R1800</h4>
           </div>
-          <a href="#"><i class="fa-solid fa-cart-plus cart" ></i></a>
+          <div class="shopping">
+            <a href="cart.html" class="add-to-cart"><i class="fa-solid fa-cart-shopping" style="color: #088178;"></i></a>
+          </div>
         </div>
-        <div class="pro">
+<!-- ======================= 7th PRODUCT ======================= -->
+        <div class="pro"  data-id="12" data-name="Cartoon Astronaut T-shirts" data-price="2800"  data-brand="adidas" data-img="../img/download1.jpeg" onclick="window.location.href='../Html/ProductPage.html'">
           <img src="../img/download1.jpeg">
           <div class="description">
-            <span>adidas</span>
+            <span>Addidas</span>
             <h5>Cartoon Astronaut T-shirts</h5>
             <div class="reviews">
               <i class="fas fa-star"></i>
@@ -154,14 +223,17 @@
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
             </div>
-            <h4>R400</h4>
+            <h4>R800</h4>
           </div>
-          <a href="#"><i class="fa-solid fa-cart-plus cart" ></i></a>
+          <div class="shopping">
+            <a href="cart.html" class="add-to-cart"><i class="fa-solid fa-cart-shopping" style="color: #088178;"></i></a>
+          </div>
         </div>
-        <div class="pro">
+<!-- ======================= 8th PRODUCT ======================= -->
+        <div class="pro"  data-id="12" data-name="Cartoon Astronaut T-shirts" data-price="2800"  data-brand="adidas" data-img="../img/download1.jpeg"onclick="window.location.href='../Html/ProductPage.html'">
           <img src="../img/download1.jpeg">
           <div class="description">
-            <span>adidas</span>
+            <span>Addidas</span>
             <h5>Cartoon Astronaut T-shirts</h5>
             <div class="reviews">
               <i class="fas fa-star"></i>
@@ -170,205 +242,197 @@
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
             </div>
-            <h4>R400</h4>
+            <h4>R11800</h4>
           </div>
-          <a href="#"><i class="fa-solid fa-cart-plus cart" ></i></a>
-        </div>
-        <div class="pro">
-          <img src="../img/download1.jpeg">
-          <div class="description">
-            <span>adidas</span>
-            <h5>Cartoon Astronaut T-shirts</h5>
-            <div class="reviews">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-            <h4>R400</h4>
+          <div class="shopping">
+            <a href="cart.html" class="add-to-cart"><i class="fa-solid fa-cart-shopping" style="color: #088178;"></i></a>
           </div>
-          <a href="#"><i class="fa-solid fa-cart-plus cart" ></i></a>
-        </div>
-        <div class="pro">
-          <img src="../img/download1.jpeg">
-          <div class="description">
-            <span>adidas</span>
-            <h5>Cartoon Astronaut T-shirts</h5>
-            <div class="reviews">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-            <h4>R400</h4>
-          </div>
-          <a href="#"><i class="fa-solid fa-cart-plus cart" ></i></a>
-        </div>
-       
-      </div>
+        </div>    
      </section>
-
+<!-- ======================= BANNER SECTION ======================= -->
      <section id="banner" class="section-p1">
       <h7>More Services</h7>
       <h8>Up to<span> 50% Off</span> -All t-shirt & Jeans</h8>
-      <button>Find Out More</button>
+      <button onclick="window.location.href='catalogue.html'">Find Out More</button>
      </section>
 
      <section id="product1" class="section-p1">
       <h2>New Arrivals</h2>
       <p>Winter Collection New Modern Design</p>
-      <div class="pro-container">
-        <div class="pro">
-          <img src="../img/download1.jpeg">
-          <div class="description">
-            <span>adidas</span>
-            <h5>Cartoon Astronaut T-shirts</h5>
-            <div class="reviews">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-            <h4>R400</h4>
-          </div>
-          <a href="#"><i class="fa-solid fa-cart-plus cart" ></i></a>
-        </div>
-        <div class="pro">
-          <img src="../img/download1.jpeg">
-          <div class="description">
-            <span>adidas</span>
-            <h5>Cartoon Astronaut T-shirts</h5>
-            <div class="reviews">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-            <h4>R400</h4>
-          </div>
-          <a href="#"><i class="fa-solid fa-cart-plus cart" ></i></a>
-        </div>
-        <div class="pro">
-          <img src="../img/download1.jpeg">
-          <div class="description">
-            <span>adidas</span>
-            <h5>Cartoon Astronaut T-shirts</h5>
-            <div class="reviews">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-            <h4>R400</h4>
-          </div>
-          <a href="#"><i class="fa-solid fa-cart-plus cart" ></i></a>
-        </div>
-        <div class="pro">
-          <img src="../img/download1.jpeg">
-          <div class="description">
-            <span>adidas</span>
-            <h5>Cartoon Astronaut T-shirts</h5>
-            <div class="reviews">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-            <h4>R400</h4>
-          </div>
-          <a href="#"><i class="fa-solid fa-cart-plus cart" ></i></a>
-        </div>
-        <div class="pro">
-          <img src="../img/download1.jpeg">
-          <div class="description">
-            <span>adidas</span>
-            <h5>Cartoon Astronaut T-shirts</h5>
-            <div class="reviews">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-            <h4>R400</h4>
-          </div>
-          <a href="#"><i class="fa-solid fa-cart-plus cart" ></i></a>
-        </div>
-        <div class="pro">
-          <img src="../img/download1.jpeg">
-          <div class="description">
-            <span>adidas</span>
-            <h5>Cartoon Astronaut T-shirts</h5>
-            <div class="reviews">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-            <h4>R400</h4>
-          </div>
-          <a href="#"><i class="fa-solid fa-cart-plus cart" ></i></a>
-        </div>
-        <div class="pro">
-          <img src="../img/download1.jpeg">
-          <div class="description">
-            <span>adidas</span>
-            <h5>Cartoon Astronaut T-shirts</h5>
-            <div class="reviews">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-            <h4>R400</h4>
-          </div>
-          <a href="#"><i class="fa-solid fa-cart-plus cart" ></i></a>
-        </div>
-        <div class="pro">
-          <img src="../img/download1.jpeg">
-          <div class="description">
-            <span>adidas</span>
-            <h5>Cartoon Astronaut T-shirts</h5>
-            <div class="reviews">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-            <h4>R400</h4>
-          </div>
-          <a href="#"><i class="fa-solid fa-cart-plus cart" ></i></a>
-        </div>
        
+<!-- ======================= NEW ARRIVALS SECTION ======================= -->
+<!-- Example for one product (you should add similar to all products) -->
+      <div class="pro-container">
+        <div class="pro"  data-id="1" data-name="Women's Lara Leather" data-price="2800"  data-brand="Fashiongroove" data-img="../img/Leather2.jpg" onclick="window.location.href='../Html/ProductPage.html'">
+          <img src="../img/Leather2.jpg">
+          <div class="description">
+            <span>Fashiongroove</span>
+            <h5>Women's Lara Leather <br>Jacket-Brown</h5></br>
+            <div class="reviews">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <h4>R2800</h4>
+          </div>
+          <div class="shopping">
+            <a href="cart.html" class="add-to-cart"><i class="fa-solid fa-cart-shopping" style="color: #088178;"></i></a>
+          </div>
+        </div>
+
+        <div class="pro" data-id="2" data-name="Mens Clyde genuine" data-price="3000"  data-brand="Fashiongroove" data-img="../img/Leather1.jpg" onclick="window.location.href='../Html/ProductPage.html'">
+          <img src="../img/Leather1.jpg">
+          <div class="description">
+            <span>Fashiongroove</span>
+            <h5>Mens Clyde genuine<br> Leather Jacket</h5></br>
+            <div class="reviews">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <h4>R3000</h4>
+          </div>
+          <div class="shopping">
+            <a href="cart.html" class="add-to-cart"><i class="fa-solid fa-cart-shopping" style="color: #088178;"></i></a>
+          </div>
+        </div>
+
+        <div class="pro" data-id="3" data-name="Women's Lara Leather" data-price="3299"  data-brand="Fashiongroove" data-img="../img/Leather3.jpg" onclick="window.location.href='../Html/ProductPage.html'">
+          <img src="../img/Leather3.jpg">
+          <div class="description">
+            <span>Fashiongroove</span>
+            <h5>Mens Logan Leather<br>Jacket-Tan</h5></br>
+            <div class="reviews">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <h4>R3299</h4>
+          </div>
+       <div class="shopping">
+            <a href="cart.html" class="add-to-cart"><i class="fa-solid fa-cart-shopping" style="color: #088178;"></i></a>
+          </div>
+        </div>
+
+        <div class="pro" data-id="4" data-name="Womens amy Jacket" data-price="2799"  data-brand="Fashiongroove" data-img="../img/Leather4.jpg" onclick="window.location.href='../Html/ProductPage.html'">
+          <img src="../img/Leather4.jpg">
+          <div class="description">
+            <span>Fashiongroove</span>
+            <h5>Womens amy Jacket<br></h5></br>
+            <div class="reviews">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <h4>R2799</h4>
+          </div>
+          <div class="shopping">
+            <a href="cart.html" class="add-to-cart"><i class="fa-solid fa-cart-shopping" style="color: #088178;"></i></a>
+          </div>
+        </div>
+        <div class="pro" data-id="5" data-name="Females Lara Leather" data-price="4500"  data-brand="Fashiongroove" data-img="../img/Leather5.jpg" onclick="window.location.href='../Html/ProductPage.html'">
+          <img src="../img/Leather5.jpg">
+          <div class="description">
+            <span>Fashiongroove</span>
+            <h5>Females Lara Leather<br>Jacket Light-brown</h5></br>
+            <div class="reviews">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <h4>R4500</h4>
+          </div><div class="shopping">
+            <a href="cart.html" class="add-to-cart"><i class="fa-solid fa-cart-shopping" style="color: #088178;"></i></a>
+          </div>
+        </div>
+
+        <div class="pro" data-id="6" data-name="Females Johhny Leather" data-price="1500"  data-brand="Fashiongroove" data-img="../img/Leather6.jpg" onclick="window.location.href='../Html/ProductPage.html'">
+          <img src="../img/Leather6.jpg">
+          <div class="description">
+            <span>Fashiongroove</span>
+            <h5>Females Johnny Leather<br>Jacket-Brown</h5></br>
+            <div class="reviews">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <h4>R1500</h4>
+          </div>
+          <div class="shopping">
+            <a href="cart.html" class="add-to-cart"><i class="fa-solid fa-cart-shopping" style="color: #088178;"></i></a>
+          </div>
+        </div>
+        <div class="pro" data-id="7" data-name="Mens Logan" data-price="2800"  data-brand="Fashiongroove" data-img="../img/Leather7.jpg" onclick="window.location.href='../Html/ProductPage.html'">
+          <img src="../img/Leather7.jpg" >
+          <div class="description">
+            <span>Fashiongroove</span>
+            <h5>Mens Logan<br>Leather Jacket</h5></br>
+            <div class="reviews">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <h4>R2600</h4>
+          </div>
+          <div class="shopping">
+            <a href="cart.html" class="add-to-cart"><i class="fa-solid fa-cart-shopping" style="color: #088178;"></i></a>
+          </div>
+        </div>
+
+        <div class="pro" data-id="8" data-name="Mens Johhny Leather" data-price="2800"  data-brand="Fashiongroove" data-img="../img/Leather8.jpg" onclick="window.location.href='../Html/ProductPage.html'">
+          <img src="../img/Leather8.jpg">
+          <div class="description">
+            <span>Fashiongroove</span>
+            <h5>Mens Johnny Leather<br>Jacket-Brown</h5></br>
+            <div class="reviews">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <h4>R2800</h4>
+          </div>
+          <div class="shopping">
+            <a href="cart.html" class="add-to-cart"><i class="fa-solid fa-cart-shopping" style="color: #088178;"></i></a>
+          </div>
+        </div>
+      
+        
       </div>
      </section>
-      
+      <!-- ======================= SECOND BANNER SECTION ======================= -->
      <section id="snd-banner"  class="section-p1">
       <div class ="banner-box">
         <h4>Crazy Deals</h4>
         <h2>buy 1 get 1 free</h2>
         <span>The best classics are on sale</span>
-        <button>Learn More</button>
+        <button onclick="window.location.href='about%20page.html'">Learn More</button>
       </div>
 
       <div class ="banner-box banner-box2">
         <h4>Summer</h4>
         <h2>Upcoming Season</h2>
         <span>The best classics are on sale</span>
-        <button>Collection</button>
+        <button onclick="window.location.href='men.html'">Collection</button>
       </div>
 
      </section>
-
+  <!-- ======================= THIRD BANNER SECTION ======================= -->
      <section id="banner3">
       <div class ="banner-box">
         <h2>SEASONAL SALE</h2>
@@ -382,7 +446,7 @@
         <h2>T-SHIRTS</h2>
       </div>
      </section>
-
+<!-- ======================= NEWSLETTER SECTION ======================= -->
      <section id="newsletter"  class="section-p1 section-m1" >
       <div class="newstext"></div>
       <h4> Sign Up For Newsletter</h4>
@@ -392,6 +456,136 @@
         <button class="normal">Sign Up</button>
       </div>
      </section>
+
+<!-- ======================= FOOTER SECTION ======================= -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-column">
+        <h3>Fashion Groove</h3>
+        <p>Celebrating Black excellence through quality products.</p>
+      </div>
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="about%20page.html">About Us</a></li>
+          <li><a href="Contact%20page.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Help</h3>
+        <ul>
+          <li><a href="Customer engagement.html">FAQs</a></li>
+          <li><a href="#">Shipping Policy</a></li>
+          <li><a href="#">Returns & Exchanges</a></li>
+          <li><a href="#">Size Guide</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Contact Us</h3>
+        <ul>
+          <li><i class="fas fa-envelope"></i> Fashiongroove@gmail.com</li>
+          <li><i class="fas fa-phone"></i> (021) 456-7890</li>
+          <li><i class="fas fa-map-marker-alt"></i> 10 Dosert Rd,Woodstock 7925, Cape Town</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="social-footer">
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-pinterest"></i></a>
+      <a href="#"><i class="fab fa-tiktok"></i></a>
+    </div>
+    
+  </footer>
+</div>
+</div>
+</footer>
+<script>
+// Attach click event to all product cards
+// Select all products
+const products = document.querySelectorAll(".pro");
+
+products.forEach(product => {
+  product.addEventListener("click", () => {
+    const productData = {
+      id: product.getAttribute("data-id"),
+      name: product.getAttribute("data-name"),
+      price: product.getAttribute("data-price"),
+      brand: product.getAttribute("data-brand"),
+      img: product.getAttribute("data-img")
+    };
+
+    // Store in localStorage
+    localStorage.setItem("selectedProduct", JSON.stringify(productData));
+
+    // Navigate to product page
+    window.location.href = "../Html/ProductPage.html";
+  });
+});
+  // cart.js
+document.addEventListener('DOMContentLoaded', function() {
+  // Initialize cart array in localStorage if it doesn't exist
+  if (!localStorage.getItem('cart')) {
+    localStorage.setItem('cart', JSON.stringify([]));
+  }
+
+  // Add click event to all "Add to Cart" buttons
+  document.querySelectorAll('.add-to-cart').forEach(button => {
+    button.addEventListener('click', function(e) {
+      e.preventDefault();
+      const productElement = this.closest('.pro');
+      
+      // Get product details from data attributes
+      const product = {
+        id: productElement.dataset.id,
+        name: productElement.querySelector('h5').textContent,
+        price: productElement.dataset.price,
+        brand: productElement.querySelector('span').textContent,
+        img: productElement.querySelector('img').src,
+        quantity: 1
+      };
+
+      addToCart(product);
+      alert('Product added to cart!');
+    });
+  });
+
+  function addToCart(product) {
+    let cart = JSON.parse(localStorage.getItem('cart'));
+    
+    // Check if product already exists in cart
+    const existingProduct = cart.find(item => item.id === product.id);
+    
+    if (existingProduct) {
+      existingProduct.quantity += 1;
+    } else {
+      cart.push(product);
+    }
+    
+    localStorage.setItem('cart', JSON.stringify(cart));
+    updateCartCount();
+  }
+
+  function updateCartCount() {
+    const cart = JSON.parse(localStorage.getItem('cart'));
+    const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
+    
+    // Update cart count in navbar (you'll need to add an element for this)
+    const cartCountElement = document.querySelector('.cart-count');
+    if (cartCountElement) {
+      cartCountElement.textContent = totalItems;
+    }
+  }
+
+  // Initialize cart count on page load
+  updateCartCount();
+});
+</script>
+   
   </body>
 
 </html>

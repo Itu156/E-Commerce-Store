@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - Online Clothing Store</title>
+    <link rel="stylesheet" href="../css/cart.css">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <section id="header">
+        <a href="index.html"><h5>Itu</h5></a>
+        <div>
+          <ul id="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="catalogue.html">Shop</a></li>
+            <li><a href="Blog.html">Blog</a></li>
+            <li><a href="about page.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li>
+              <a href="cart.html">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="cart-count">0</span>
+              </a>
+            </li>
+            <li class="dropdown">
+              <a href="#"><i class="fa-solid fa-circle-user"></i></a>
+              <ul class="dropdown-menu">
+                <li><a href="admin-login.html">Admin</a></li>
+                <li><a href="user-login.html">User</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+    </section>
+
+    <h1>My Cart Items</h1>
+    <!-- Shopping Cart Section -->
+    <main class="cart-container">
+        <div class="cart-items" id="cart-items-container">
+            <!-- Cart items will be dynamically inserted here -->
+            <div class="empty-cart-message">
+                <p>Your cart is empty</p>
+                <a href="catalogue.html" class="continue-shopping">Continue Shopping</a>
+            </div>
+        </div>
+
+        <!-- Summary Section -->
+        <div class="cart-summary">
+            <h3>Subtotal: <span id="subtotal">R0,00</span></h3>
+            <div class="promo">
+                <input type="text" id="promoCode" placeholder="Enter Promo Code">
+                <button id="applyPromo"><i class="fa-solid fa-ticket"></i> Apply</button>
+            </div>
+            <p><strong><i class="fa-solid fa-truck"></i> Shipping Method:</strong></p>
+            <p><strong><i class="fa-solid fa-calendar-days"></i> Estimated delivery:</strong> 3-5 business days</p>
+            <button id="checkoutBtn">Proceed to Checkout</button>
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+    // Load cart from localStorage
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const cartItemsContainer = document.getElementById('cart-items-container');
+    const subtotalElement = document.getElementById('subtotal');
+    const checkoutBtn = document.getElementById('checkoutBtn');
+
+    // Display cart items
+    function displayCartItems() {
+        cartItemsContainer.innerHTML = '';
+        
+        if (cart.length === 0) {
+            cartItemsContainer.innerHTML = `
+                <div class="empty-cart-message">
+                    <p>Your cart is empty</p>
+                    <a href="catalogue.html" class="continue-shopping">Continue Shopping</a>
+                </div>
+            `;
+            subtotalElement.textContent = 'R0,00';
+            checkoutBtn.disabled = true;
+            return;
+        }
+
+        checkoutBtn.disabled = false;
+        
+        let subtotal = 0;
+        
+        cart.forEach((item, index) => {
+            const itemTotal = item.price * item.quantity;
+            subtotal += itemTotal;
+            
+            const cartItemElement = document.createElement('div');
+            cartItemElement.className = 'cart-item';
+            cartItemElement.dataset.index = index;
+            cartItemElement.innerHTML = `
+                <img src="${item.img}" alt="${item.name}" width="80" height="80">
+                <div class="item-description">
+                    <h4>${item.name}</h4>
+                    <p>• Brand: ${item.brand}<br>• Price: R${item.price},00<br>• Total: R${itemTotal},00</p>
+                </div>
+                <div class="item-quantity">
+                    <button class="qty-btn minus"><i class="fa-solid fa-minus"></i></button>
+                    <span class="qty">${item.quantity}</span>
+                    <button class="qty-btn plus"><i class="fa-solid fa-plus"></i></button>
+                </div>
+                <button class="remove-item"><i class="fa-solid fa-trash"></i></button>
+            `;
+            
+            cartItemsContainer.appendChild(cartItemElement);
+        });
+
+        subtotalElement.textContent = `R${subtotal},00`;
+        updateCartCount();
+    }
+
+    // Update quantity
+    function updateQuantity(index, change) {
+        cart[index].quantity += change;
+        
+        if (cart[index].quantity < 1) {
+            cart[index].quantity = 1;
+        }
+        
+        localStorage.setItem('cart', JSON.stringify(cart));
+        displayCartItems();
+    }
+
+    // Remove item
+    function removeItem(index) {
+        cart.splice(index, 1);
+        localStorage.setItem('cart', JSON.stringify(cart));
+        displayCartItems();
+    }
+
+    // Event delegation for quantity buttons
+    cartItemsContainer.addEventListener('click', (e) => {
+        const cartItem = e.target.closest('.cart-item');
+        if (!cartItem) return;
+        
+        const index = parseInt(cartItem.dataset.index);
+        
+        if (e.target.closest('.plus')) {
+            updateQuantity(index, 1);
+        } else if (e.target.closest('.minus')) {
+            updateQuantity(index, -1);
+        } else if (e.target.closest('.remove-item')) {
+            removeItem(index);
+        }
+    });
+
+    // Promo code
+    document.getElementById("applyPromo").addEventListener("click", () => {
+        const code = document.getElementById("promoCode").value.trim();
+        if (code === "SAVE10") {
+            alert("Promo applied! 10% off");
+            // You can implement discount logic here
+        } else {
+            alert("Invalid promo code");
+        }
+    });
+
+    // // Checkout button
+    // checkoutBtn.addEventListener("click", () => {
+    //     if (cart.length === 0) {
+    //         alert("Your cart is empty! Please add items before checking out.");
+    //     } else {
+    //         // Here you would typically redirect to a checkout page
+    //         alert(`Proceeding to checkout. Total: ${subtotalElement.textContent}`);
+    //         // window.location.href = "checkout.html";
+    //     }
+    // });
+    checkoutBtn.addEventListener("click", () => {
+    if (cart.length === 0) {
+        alert("Your cart is empty! Please add items before checking out.");
+    } else {
+        // Save cart to localStorage (already done, just to be sure)
+        localStorage.setItem('cart', JSON.stringify(cart));
+        // Navigate to checkout page
+        window.location.href = "checkout.html";
+    }
+});
+
+    // Update cart count in navbar
+    function updateCartCount() {
+        const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
+        document.querySelectorAll('.cart-count').forEach(el => {
+            el.textContent = totalItems;
+        });
+    }
+
+    // Initialize
+    displayCartItems();
+});
+    </script>
+</body>
+</html>

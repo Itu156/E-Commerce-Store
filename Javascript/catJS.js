@@ -1,49 +1,48 @@
-const menMenu = document.getElementById('menMenu');
+ const menMenu = document.getElementById('menMenu');
   const womenMenu = document.getElementById('womenMenu');
-   const kid = document.getElementById('kid');
-    const sale = document.getElementById('sale');
-  const dropdown = menMenu.querySelector('.dropdown');
+  const kid = document.getElementById('kid');
+  const sale = document.getElementById('sale');
+
+  const menDropdown = menMenu.querySelector('.dropdown');
+  const womenDropdown = document.querySelector('.dropdownw'); // Corrected
+  const kidDropdown = kid.nextElementSibling; // Grabs the dropdown after #kid
+  const saleDropdown = sale.nextElementSibling; // Grabs the dropdown after #sale
+
+  // Hide all dropdowns helper
+  function hideAllDropdowns() {
+    menDropdown.style.display = 'none';
+    womenDropdown.style.display = 'none';
+    kidDropdown.style.display = 'none';
+    saleDropdown.style.display = 'none';
+  }
 
   menMenu.addEventListener('click', (e) => {
-    
     e.stopPropagation();
-    dropdown.style.display = dropdown.style.display === 'flex' ? 'none' : 'flex';
+    const isVisible = menDropdown.style.display === 'flex';
+    hideAllDropdowns();
+    menDropdown.style.display = isVisible ? 'none' : 'flex';
   });
 
-  
-  document.addEventListener('click', () => {
-    dropdown.style.display = 'none';
-  });
-  
   womenMenu.addEventListener('click', (e) => {
-    
     e.stopPropagation();
-    dropdown.style.display = dropdown.style.display === 'flex' ? 'none' : 'flex';
+    const isVisible = womenDropdown.style.display === 'flex';
+    hideAllDropdowns();
+    womenDropdown.style.display = isVisible ? 'none' : 'flex';
   });
 
-  
-  document.addEventListener('click', () => {
-    dropdown.style.display = 'none';
-  });
-  
-   kid.addEventListener('click', (e) => {
-    
+  kid.addEventListener('click', (e) => {
     e.stopPropagation();
-    dropdown.style.display = dropdown.style.display === 'flex' ? 'none' : 'flex';
+    const isVisible = kidDropdown.style.display === 'flex';
+    hideAllDropdowns();
+    kidDropdown.style.display = isVisible ? 'none' : 'flex';
   });
 
-  
-  document.addEventListener('click', () => {
-    dropdown.style.display = 'none';
-  });
-  
-   sale.addEventListener('click', (e) => {
-    
+  sale.addEventListener('click', (e) => {
     e.stopPropagation();
-    dropdown.style.display = dropdown.style.display === 'flex' ? 'none' : 'flex';
+    const isVisible = saleDropdown.style.display === 'flex';
+    hideAllDropdowns();
+    saleDropdown.style.display = isVisible ? 'none' : 'flex';
   });
 
-  
-  document.addEventListener('click', () => {
-    dropdown.style.display = 'none';
-  });
+  // Hide all dropdowns if you click outside
+  document.addEventListener('click', hideAllDropdowns);

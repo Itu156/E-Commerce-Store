@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Title-->
+    <title>FashionGroove</title>
+    <!--Css Link-->
+    <link rel="stylesheet" href="../css/SignUp.css">
+    <!--Boxicon Link-->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <!--FontAwesome Link-->
+    <script src="https://kit.fontawesome.com/8f4dd639f5.js" crossorigin="anonymous"></script>
+</head>
+<body>
+   <div class="admin-container">
+    <div class="myform">
+
+      <form id="signupForm">
+        <h2>SIGN UP</h2>
+        <input type="text" id="firstName" placeholder="Name" required>
+        <input type="text" id="lastName" placeholder="Surname" required>
+        <input type="text" id="phoneNumber" placeholder="Phone Number" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <input type="text" id="address" placeholder="Address">
+        <button type="submit">Sign Up</button>
+      </form>
+    </div>
+    <div class="image">
+      <img src="../img/image.jpg">
+    </div>
+  </div>
+  <script>
+    document.getElementById("signupForm").addEventListener("submit", async function(e) {
+      e.preventDefault();
+  
+      const user = {
+        firstName: document.getElementById("firstName").value,
+        lastName: document.getElementById("lastName").value,
+        phoneNumber: document.getElementById("phoneNumber").value,
+        email: document.getElementById("email").value,
+        password: document.getElementById("password").value,
+        address: document.getElementById("address").value
+      };
+  
+      try {
+        const response = await fetch("http://localhost:8080/user/save", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(user)
+        });
+  
+        if (response.ok) {
+          alert("Signup Successful! You are now a member.");
+          window.location.href ="/Html/user-login.html"
+          // document.getElementById("signupForm").reset();
+        } else {
+          alert("Signup failed. Try again.");
+        }
+      } catch (error) {
+        console.error("Error:", error);
+        alert("Something went wrong.");
+      }
+    });
+  </script>
+</body>
+</html>
