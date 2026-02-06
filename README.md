@@ -36,3 +36,18 @@ This frontend provides the visual interface and user interaction layer for brows
 ├── index.html            # Home page
 ├── cart.html             # Shopping cart page
 └── README.md             # Project overview
+```
+
+---
+
+## 🚀 How to Use
+
+1. Clone the repository
+   ```bash
+   git clone https://github.com/Itu156/E-Commerce-Store.git
+
+2.Open the Project folder in your machine.
+
+3.Double click index.html to open your browswer.
+
+4.Navigater through the store interface and interact with the UI
